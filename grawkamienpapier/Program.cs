@@ -4,6 +4,7 @@ class Gra
 {
     static void Main(string[] args)
     {
+        Gra:
         int pktkomputera = 0;
         int pktgracza = 0;
 
@@ -51,14 +52,31 @@ class Gra
             else if ((wybor_gracza_int == 0 && wybor_komputera == 1) || (wybor_gracza_int == 1 && wybor_komputera == 2) || (wybor_gracza_int == 2 && wybor_komputera == 0))
             {
                 Console.WriteLine("Komputer wygrywa");
+                Console.WriteLine($"Kpmputer: {pktkomputera} --- Gracz: {pktgracza}");
                 pktkomputera++;
             }
             else
             {
                 Console.WriteLine("Gracz wygrywa");
+                Console.WriteLine($"Kpmputer: {pktkomputera} --- Gracz: {pktgracza}");
                 pktgracza++;
             }
         }
+        if (pktgracza == wymaganapkt)
+        {
+            Console.WriteLine("BEAOW!!!!! wygrales gre!!!!!!!!!");
+        }
+        else if (pktkomputera == wymaganapkt)
+        {
+            Console.WriteLine("Przegrales ;//");
+        }
+        Console.WriteLine("Czy chcesz zagrac ponownie? (t/n)");
+        string odp = Console.ReadLine();
+        if (odp == "t")
+        {
+            goto Gra;
+        }
+        else { }
     }
 }
 
